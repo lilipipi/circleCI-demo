@@ -10,7 +10,7 @@ jobs:
           command: |
             yarn --frozen-lockfile
       - run:
-          name: tests
+          name: run tests
           command: |
             yarn test
   pack:
@@ -33,7 +33,7 @@ workflows:
     jobs:
       - build
       - pack:
-        requires:
-          - build
+          requires:
+            - build
 
             
